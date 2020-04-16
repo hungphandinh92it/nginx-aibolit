@@ -48,7 +48,7 @@ spec:
       - name: nginx-app
         image: nginx:1
         # for local development against minikube registry
-        #imagePullPolicy: Never        
+        #imagePullPolicy: Never
         ports:
         - containerPort: 80
         - containerPort: 443
@@ -74,6 +74,6 @@ spec:
   selector:
     app: nginx-app
   sessionAffinity: None
-  type: ClusterIP
+  type: NodePort
 status:
   loadBalancer: {}
